@@ -10,6 +10,7 @@ packages = [{include = "unit_testing_lab"}]
 python = "^3.10"
 psycopg2 = "^2.9.3"
 SQLAlchemy = "^1.4.39"
+pydantic = "^1.9.1"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -19,6 +20,7 @@ black = "^22.6.0"
 isort = "^5.10.1"
 moto = "^3.1.16"
 testcontainers = {version = "^3.6.0", extras = ["postgres"]}
+hypothesis = "^6.54.1"
 
 [build-system]
 requires = ["poetry-core"]
