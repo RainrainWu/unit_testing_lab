@@ -1,4 +1,3 @@
-
 class TestPostgresUser:
     def test_postgres_connection(self, fixture_postgres_user):
 

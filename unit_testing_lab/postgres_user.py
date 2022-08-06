@@ -1,8 +1,8 @@
-import psycopg2
 import warnings
 
-warnings.simplefilter("ignore")
+import psycopg2
 
+warnings.simplefilter("ignore")
 
 
 class PostgresUser:
