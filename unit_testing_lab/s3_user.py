@@ -14,7 +14,7 @@ class S3User:
 
         self.__bucket = self.__resource.Bucket(name=self.__bucket_name)
 
-    def check_object_exist(self, key: str):
+    def check_object_exist(self, key: str) -> bool:
 
         try:
             self.__client.head_object(Bucket=self.__bucket_name, Key=key)
@@ -22,7 +22,7 @@ class S3User:
         except ClientError:
             return False
 
-    def get_object_content(self, key: str):
+    def get_object_content(self, key: str) -> str:
 
         fileobj = BytesIO()
         self.__bucket.download_fileobj(key, fileobj)
