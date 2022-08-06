@@ -15,6 +15,7 @@ pytest = "^7.1.2"
 black = "^22.6.0"
 isort = "^5.10.1"
 pytest-xdist = "^2.5.0"
+moto = "^3.1.16"
 
 [build-system]
 requires = ["poetry-core"]
