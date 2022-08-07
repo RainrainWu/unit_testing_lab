@@ -1,29 +1,9 @@
 import pytest
 
-from unittest.mock import patch
-
 from unit_testing_lab.randomizer import Randomizer
 
 
 class TestRandomizer:
-
-    @pytest.fixture(scope="function")
-    def fixture_patched_pick(self):
-
-        with patch.object(Randomizer, "pick") as patched_pick:
-            yield patched_pick
-
-    @pytest.fixture(scope="function")
-    def fixture_patched_pick_with_return_value(self, fixture_patched_pick):
-
-        fixture_patched_pick.side_effect = range(10)
-        yield fixture_patched_pick
-
-    @pytest.fixture(scope="function")
-    def fixture_patched_pick_with_error_raised(self, fixture_patched_pick):
-
-        fixture_patched_pick.side_effect = ValueError
-        yield fixture_patched_pick
 
     def test_pick(self):
 
