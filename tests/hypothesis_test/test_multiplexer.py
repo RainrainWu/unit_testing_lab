@@ -25,15 +25,6 @@ class TestMultiplexer:
 
         Multiplexer().operate(operation)
 
-    @given(
-        operation=sampler_operation.filter(
-            lambda op: op.operation_type == OperationType.ADD
-        )
-    )
-    def test_operate_add_only(self, operation):
-
-        Multiplexer().operate(operation)
-
     @given(operation=sampler_operation)
     def test_operate_ignore_mul(self, operation):
 
