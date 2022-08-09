@@ -36,11 +36,7 @@ def fixture_postgres_test_students_amount():
 
 
 @pytest.fixture(scope="session", autouse=True)
-def fixture_postgres(
-    fixture_postgres_username,
-    fixture_postgres_password,
-    fixture_postgres_dbname,
-):
+def fixture_postgres():
 
     with PostgresContainer("postgres:14.4") as postgres:
         yield postgres
